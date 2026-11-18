@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Vercel local project link
+.vercel/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Local tooling and browser profiles
+.playwright-mcp/
+
+# Images in the project root: reference-site screenshots and the original couple photo (the site does not use them)
+/*.png
+
+# 4K photo master: kept locally, not loaded by the site and too large for the repo
+src/assets/couple/couple-hero-master-4k.png
+
+# Notes about a third-party reference site, and private project notes (kept locally, not published)
+/reference-inspection.md
+/info.md
+
+# Files kept on this computer only (e.g. audio without a clear licence)
+/local-only/
