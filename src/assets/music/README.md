@@ -1,16 +1,18 @@
 # Background music
 
-`wedding-intro.mp3` is the music the site plays. It is detected automatically at build time: the music button
-appears and playback starts when a guest taps "Open Invitation". With no audio file in this folder, music is off
-and the button is hidden. If several audio files are present, the first by filename is used, so keep only one.
+The site plays one file, imported by name in `src/useMusic.ts`: **`raataan-lambiyan.mp3`**. Nothing else in this
+folder is bundled, and there is no fallback track.
 
-**Source and licence (as supplied by the site owner):** trimmed from the Pixabay download
-`india_happy-indian-wedding-490659.mp3` (Pixabay Content License: free to use and modify, no attribution required,
-but the content may not be redistributed on a standalone basis). Please keep the original Pixabay track page or
-download receipt as proof. Only use recordings you hold the licence for; never add audio ripped from streaming
-services or download sites.
+**What it is:** "Raataan Lambiyan", an unmodified copy of `Raataan Lambiyana_320(KoshalWorld.Com).mp3`
+(320 kbps, about 3:50). The file's tags say it was downloaded from a download site and name Jubin Nautiyal and
+Asees Kaur. It is a commercial film-song recording.
 
-**How it was made:** the first 16 seconds, 128 kbps, tags removed. The site itself stops playback at 15 seconds,
-resets to 0:00 and never loops.
+**Publication rights: not established.** There is no licence, receipt or written permission for this recording
+in this project. It is published here at the site owner's decision, and a 15-second clip on a public website
+can still require permission from the label and the publisher. If a rights holder objects, or to switch to a
+recording with a licence (for example a licensed instrumental or cover, keeping the receipt), replace the file
+and update the import in `src/useMusic.ts`.
 
-Settings (volume, fade-in time, the 15-second limit) are at the top of `src/useMusic.ts`.
+**Playback:** it starts when a guest taps "Open Invitation", plays the first 15 seconds, then stops at once,
+resets to 0:00 and never loops. Settings (volume, fade-in time, the 15-second limit) are at the top of
+`src/useMusic.ts`.

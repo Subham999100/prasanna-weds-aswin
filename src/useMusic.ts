@@ -1,14 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import musicUrl from './assets/music/raataan-lambiyan.mp3'
 
-// Picks up the first audio file placed in src/assets/music/ at build time (see README there).
-// With no file, MUSIC_SRC is '' and the whole feature stays off.
-const files = import.meta.glob('./assets/music/*.{mp3,m4a,ogg,wav}', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-}) as Record<string, string>
-
-const MUSIC_SRC = Object.values(files)[0] ?? ''
+// The background track is this one file, imported by name (no automatic file picking). Publication
+// rights for it have not been shown: read src/assets/music/README.md before publishing the repo.
+const MUSIC_SRC: string = musicUrl
 const PLAY_LIMIT_S = 15 // the music is a short intro: it stops here, jumps back to 0:00 and never loops
 const TARGET_VOLUME = 0.35
 const FADE_IN_MS = 3000
